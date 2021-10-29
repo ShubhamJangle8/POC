@@ -1,0 +1,275 @@
+.App {
+  text-align: center;
+}
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.main{
+  position: static;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.row{
+  width: 80%;
+  background: white;
+  border-radius: 30px;
+  box-shadow: 5px 5px 10px grey;
+  height: 80vh;
+}
+
+
+.container{
+  display: flex;
+  justify-content: center;
+}
+
+.contain{
+  max-height: 80vh;
+  border-radius: 30px;
+}
+
+/* .login .img-fluid{
+  height: 100%;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  background-color: blue;
+} */
+
+.text-size{
+  font-size: 60px;
+  /* padding: 20px; */
+}
+
+input[type="checkbox"] {
+  position: relative;
+  width: 240px;
+  height: 40px;
+  background: rgb(235, 78, 78);
+  -webkit-appearance: none;
+  outline: none;
+  transition: .4s;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+input:checked[type="checkbox"] {
+  background: #3498db;
+}
+
+input[type="checkbox"]::before {
+  z-index: 2;
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 120px;
+  height: 40px;
+  background: rgb(235, 229, 229);
+  /* border-radius: 30%; */
+  border: 1px solid black;
+  transform: scale(1.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: .4s;
+}
+
+input:checked[type="checkbox"]::before {
+  left: 130px;
+}
+
+.toggle {
+  position: relative;
+  display: inline;
+}
+/* .toggleBox {
+  display: 
+} */
+label {
+  position: absolute;
+  color: black;
+  font-weight: 600;
+  font-size: 20px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.onbtn {
+  bottom: 11px;
+  left: 18px;
+}
+
+.ofbtn {
+  bottom: 11px;
+  right: 10px;
+  color: black;
+}
+
+.inp{
+  height: 50px;
+  width: 70%;
+  border: none;
+  outline: none;
+  /* border-radius: 60px; */
+  box-shadow: 5px 7px 5px -1px rgba(0,0,0,0.41) inset;
+-webkit-box-shadow: 5px 7px 5px -1px rgba(0,0,0,0.41) inset;
+-moz-box-shadow: 5px 7px 5px -1px rgba(0,0,0,0.41) inset;
+  /* border-bottom: 1px solid black; */
+}
+
+.btn-1{
+  height: 50px;
+  width: 50%;
+  border: none;
+  outline: none;
+  border-radius: 60px;
+  font-weight: 600;
+  background-color: rgb(240, 59, 59);
+  color: white;
+}
+
+.btn-1:hover{
+  background-color: rgb(238, 20, 20);
+}
+
+.red{
+  background-color: red;
+}
+
+.blue{
+  background-color: blue;
+}
+
+@media screen and (max-width:992px) {
+  .row{
+    height: 80%;
+  }
+  .login .img-fluid{
+    height: 100%;
+    border-radius: 30px;
+  }
+  .row{
+    border-radius: 30px;
+  }
+  .text-size{
+    font-size: 40px;
+  }
+}
+@media screen and (max-width:768px) {
+  .row{
+    height: 80%;
+  }
+  .login .img-fluid{
+    height: 100%;
+    /* border-radius: 30px; */
+  }
+  /* .col{
+    max-height: 40vh;
+  } */
+  label {
+    font-weight: 600;
+    font-size: 14px !important;
+  }
+  input[type="checkbox"] {
+    width: 180px;
+    height: 40px;
+  }
+  
+  /* input:checked[type="checkbox"] {
+    background: #3498db;
+  } */
+  
+  input[type="checkbox"]::before {
+    left: 0;
+    width: 80px;
+    height: 40px;
+  }
+  
+  input:checked[type="checkbox"]::before {
+    left: 100px;
+  }
+  .onbtn {
+    bottom: 15px;
+    left: 25px;
+  }
+  
+  .ofbtn {
+    bottom: 15px;
+    right: 20px;
+  }
+}
+@media screen and (max-width:451px) {
+
+  label {
+    font-weight: 600;
+    font-size: 10px !important;
+  }
+  input[type="checkbox"] {
+    width: 130px;
+    height: 30px;
+  }
+  
+  /* input:checked[type="checkbox"] {
+    background: #3498db;
+  } */
+  
+  input[type="checkbox"]::before {
+    left: 0;
+    width: 60px;
+    height: 30px;
+  }
+  
+  input:checked[type="checkbox"]::before {
+    left: 70px;
+  }
+  .onbtn {
+    bottom: 12px;
+    left: 15px;
+  }
+  
+  .ofbtn {
+    bottom: 12px;
+    right: 10px;
+  }
+}
